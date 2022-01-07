@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { NavLink } from 'react-router-dom';
 
 const Navbar_2 = () => {
     return (
@@ -63,6 +65,7 @@ const Navbar_2 = () => {
                                 প্রযুক্তি
                             </a>
 
+
                         </div>
                     </li>
                     <li className="nav-item">
@@ -71,8 +74,11 @@ const Navbar_2 = () => {
 
                     </li>
                     <li className="nav-item">
-
-                        <a className="nav-link hvr-underline-from-center" href="./About Us.html"><strong>About Us</strong></a>
+                        <NavLink to="/aboutus" >
+                            <a className="nav-link hvr-underline-from-center"><strong>
+                                About Us
+                            </strong></a>
+                        </NavLink>
                     </li>
 
                 </ul>
@@ -82,4 +88,4 @@ const Navbar_2 = () => {
     )
 }
 
-export default Navbar_2
+export default Navbar_2;

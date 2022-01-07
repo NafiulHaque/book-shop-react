@@ -1,45 +1,40 @@
 
 // import './App.css';
-import Footer from './Books/Components/Footer';
-import Box from './Books/Components/Hero/Box';
-import Carocel from './Books/Components/Hero/Carocel';
-import Box_2 from './Shared/Components/Boxs/Box_2';
-import Box_3 from './Shared/Components/Boxs/Box_3';
-import SilkCaroucel_1 from './Shared/Components/Carocels/silkCaroucel_1';
-import Countdown from './Shared/Components/Countdown/Countdown';
+
+import React from "react";
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import AboutUs from "./Books/Pages/AboutUs";
 import Navbar from './Shared/Components/Navigation/Navbar';
 import Navbar_2 from './Shared/Components/Navigation/Navbar_2';
+import Footer from "./Books/Components/Footer";
+
+
+
+import HomePage from "./Books/Pages/HomePage";
+
 
 function App() {
   return (
-
-    <div className="App">
-
+    <Router>
       <Navbar />
       <Navbar_2 />
-      <Carocel />
-      <hr />
-      <div className="container-fluid">
-        <Box />
-        <hr />
-        <SilkCaroucel_1 />
-        <hr />
-        <Box_2 />
-        <hr />
-        <SilkCaroucel_1 />
-        <hr />
-        <Box_3 />
-        <hr />
-        <SilkCaroucel_1 />
-        <hr />
-        <Countdown />
-        <hr />
+      <Switch>
+        <Route exact path="/" element={<HomePage />}>
+          <HomePage />
+        </Route>
 
-      </div>
+        {/* <Route path="/:userId/places" exact>
+<UserPlaces />
+</Route> */}
+        <Route path="/aboutus">
+          <AboutUs />
+        </Route>
+        <Redirect to="/" />
+      </Switch>
+
       <Footer />
+    </Router>
 
-
-    </div>
 
   );
 }
