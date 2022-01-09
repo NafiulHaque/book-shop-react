@@ -69,9 +69,9 @@ const Navbar_2 = () => {
                         </div>
                     </li>
                     <li className="nav-item">
-
-                        <a className="nav-link hvr-underline-from-center" href="./Creat an account .html"><strong>Contact Us</strong></a>
-
+                        <NavLink to="/createaccount" >
+                            <a className="nav-link hvr-underline-from-center" href="./Creat an account .html"><strong>Contact Us</strong></a>
+                        </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/aboutus" >
