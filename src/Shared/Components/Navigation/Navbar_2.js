@@ -14,8 +14,10 @@ const Navbar_2 = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav m-auto">
                     <li className="nav-item active">
-                        <a className="nav-link hvr-underline-from-center" href="./index.html"><strong>Home</strong> <span
-                            className="sr-only">(current)</span></a>
+                        <NavLink to="/">
+                            <a className="nav-link hvr-underline-from-center" href="./index.html"><strong>Home</strong> <span
+                                className="sr-only">(current)</span></a>
+                        </NavLink>
                     </li>
 
 

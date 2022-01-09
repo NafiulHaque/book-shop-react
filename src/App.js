@@ -5,13 +5,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import Navbar from './Shared/Components/Navigation/Navbar';
 import Navbar_2 from './Shared/Components/Navigation/Navbar_2';
-import Footer from "./Books/Components/Footer";
+import Footer from "./BookShop/Components/Footer";
 
 
 
-import HomePage from "./Books/Pages/HomePage";
-import CreateAccount from "./Books/Pages/CreateAccount";
-import AboutUs from "./Books/Pages/AboutUs";
+import HomePage from "./BookShop/Pages/HomePage";
+import CreateAccount from "./BookShop/Pages/CreateAccount";
+import AboutUs from "./BookShop/Pages/AboutUs";
 
 
 function App() {
