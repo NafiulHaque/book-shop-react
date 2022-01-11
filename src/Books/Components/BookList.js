@@ -2,7 +2,7 @@ import React from 'react';
 import BookItem from './BookItem';
 
 const BookList = props => {
-    console.log(props.items.BOOKS);
+    // console.log(props.items.BOOKS);
     if (props.items.length === 0) {
         return (
             <div className='center'>
@@ -15,7 +15,7 @@ const BookList = props => {
     return (
         <div className="regular slider">
 
-            {props.items.BOOKS.map(book => {
+            {props.items.catebooks.map(book => {
                 return <BookItem
                     key={book.id}
                     id={book.id}

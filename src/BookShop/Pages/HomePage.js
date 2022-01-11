@@ -17,11 +17,11 @@ const HomePage = () => {
             <div className="container-fluid">
                 <Box />
                 <hr />
-                <SilkCaroucel_1 />
+                <SilkCaroucel_1 item='ইঞ্জিনিয়ারিং' />
                 <hr />
                 <Box_2 />
                 <hr />
-                <SilkCaroucel_1 />
+                <SilkCaroucel_1 item='বাংলা' />
                 <hr />
                 <Box_3 />
                 <hr />

@@ -1,7 +1,7 @@
 import React from 'react'
 import BookList from './BookList'
 
-const Books = () => {
+const Books = props => {
 
     const BOOKS = [
         {
@@ -84,8 +84,23 @@ const Books = () => {
             publication: ''
 
         },
+        {
+            id: 'b9',
+            name: 'File System Forensic Analysis 3rd ed',
+            writter: 'Brian Carier',
+            image: 'https://firebasestorage.googleapis.com/v0/b/striking-port-331208.appspot.com/o/8.jpg?alt=media&token=86419a3a-9ce1-47c8-b0e8-18fcee09d376',
+            category: 'বাংলা',
+            price: 400,
+            publication: ''
+
+        },
     ]
-    return <BookList items={{ BOOKS }} />
+    const catebooks = BOOKS.filter(item => props.item === item.category)
+    // console.log(props.item);
+    // console.log(catebooks);
+    // console.log(BOOKS);
+
+    return <BookList items={{ catebooks }} />
 
 
 }

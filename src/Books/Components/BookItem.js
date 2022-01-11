@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BookItem = props => {
-    console.log(props);
+    // console.log(props);
     return (
         <div className='item'>
             <div className="card hvr-grow-shadow" >
