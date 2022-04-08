@@ -12,24 +12,28 @@ const BookList = props => {
             </div>
         )
     }
-    return (
-        <div className="regular slider">
-
-            {props.items.catebooks.map(book => {
-                return <BookItem
-                    key={book.id}
-                    id={book.id}
-                    name={book.name}
-                    writter={book.writter}
-                    image={book.image}
-                    price={book.price}
-                    category={book.category}
-                />
-            })}
+    else {
 
 
-        </div>
-    )
+        return (
+            <div className="regular slider">
+
+                {props.items.catebooks.map(book => {
+                    return <BookItem
+                        key={book.id}
+                        id={book.id}
+                        name={book.name}
+                        writter={book.writter}
+                        image={book.image}
+                        price={book.price}
+                        category={book.category}
+                    />
+                })}
+
+
+            </div>
+        )
+    }
 }
 
 export default BookList;
