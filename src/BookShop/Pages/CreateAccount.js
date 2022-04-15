@@ -1,24 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const CreateAccount = () => {
+    const [login, setlogin] = useState(false);
     return (
 
-        <div className="container w-50 mb-5">
+        <div className="container mb-5">
 
-            <div align="center" className="title bg-primary text-white p-1 my-4 "><h2>Creat an account</h2></div>
+            <div align="center" className="title bg-primary text-white p-1 my-4 "><h2>{login === true ? "Login " : "Create an account"}</h2></div>
             <div className="sub container">
                 <form >
-
                     <div className="row">
-                        <div className="col">
+                        <div className="col-md-6">
                             <div className="form-group">
 
                                 <label for="Firstname">First Name :</label>
                                 <input type="text" className="form-control" id="Firstname" placeholder="First Name" />
                             </div>
-
                         </div>
-                        <div className="col">
+                        <div className="col-md-6">
 
                             <div className="form-group">
 
@@ -28,9 +27,9 @@ const CreateAccount = () => {
                         </div>
 
                     </div>
+                    {/* county and city */}
 
-
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col">
                             <label className="my-1 mr-2" for="Country">Country :</label>
                             <select className="custom-select my-1 mr-sm-2" id="Country">
@@ -53,26 +52,26 @@ const CreateAccount = () => {
                             </select>
                         </div>
 
-                    </div>
+                    </div> */}
 
                     <div className="form-group">
 
                         <label for="Email">Email :</label>
-                        <input type="Email" className="form-control" id="Email" placeholder="@gmail.com" />
+                        <input type="Email" className="form-control" id="Email" placeholder="xyz@gmail.com" />
                     </div>
 
 
-                    <div className="form-group">
+                    {/* <div className="form-group">
 
                         <label for="PhoneNumber">Phone Number :</label>
                         <input type="Number" className="form-control" id="PhoneNumber" placeholder="Inter Your Phone Number" />
-                    </div>
+                    </div> */}
 
 
 
                     <div className="form-group">
 
-                        <label for="Password">Choose Password :</label>
+                        <label for="Password">Password :</label>
                         <input type="Password" className="form-control" id="Password" placeholder="..............." />
                     </div>
 
@@ -85,15 +84,15 @@ const CreateAccount = () => {
                     </div>
 
 
-                    <div className="form-group">
+                    {/* <div className="form-group">
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" id="gridCheck" />
                             <label className="form-check-label" for="gridCheck">
                                 Check me out
                             </label>
                         </div>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Register Now!</button>
+                    </div> */}
+                    <button type='submit' onClick={() => setlogin(true)} className="btn btn-primary">{login === false ? "Register Now" : "Login"}</button>
                 </form>
             </div>
 
