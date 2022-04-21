@@ -12,7 +12,7 @@ import Footer from "./BookShop/Components/Footer";
 import HomePage from "./BookShop/Pages/HomePage";
 import CreateAccount from "./BookShop/Pages/CreateAccount";
 import AboutUs from "./BookShop/Pages/AboutUs";
-
+import Dashboard from "./DashBoard/dashboard";
 
 function App() {
   return (
@@ -33,6 +33,9 @@ function App() {
         </Route>
         <Route path="/aboutus">
           <AboutUs />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
         </Route>
         <Redirect to="/" />
       </Switch>
